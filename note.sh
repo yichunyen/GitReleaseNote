@@ -6,7 +6,7 @@
 read -r -p "Please input previous SHA of release version commit: " SHA  
 
 # Log the SHA timestamp and export to the timestamp.txt
-git log $SHA --pretty=format:"%C(blue)%ad" --date=format:"%Y-%m-%d %H:%M:%S" > timestamp.txt
+git log $SHA --pretty=format:"%C(blue)%ad" --date=format:"%Y-%m-%d %H:%M:%S" -1> timestamp.txt
 
 # Read the filte content from timestamp.txt
 timestamp=`cat timestamp.txt`
